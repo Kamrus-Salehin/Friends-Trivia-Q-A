@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-llm=ChatGoogleGenerativeAI(model='gemini-2.0-flash', google_api_key=os.environ['api_key'], temperature=0.1)
+llm=ChatGoogleGenerativeAI(model='gemini-2.5-flash', google_api_key=os.environ['api_key'], temperature=0.1)
 
 embedding_model=HuggingFaceEmbeddings(model_name="hkunlp/instructor-large")
 vectordb_file_path="faiss_index"
